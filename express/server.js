@@ -7,7 +7,11 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use('/', (req, res) => res.send({"message": "hi there!"}));
+const router = express.Router();
+router.get('/'. (req,res)=> res.send({"message": "hi there!"}))
+
+app.use(bodyParser.json());
+app.use('/.netlify/functions/server', router);
 
 module.exports = app;
 module.exports.handler = serverless(app);
