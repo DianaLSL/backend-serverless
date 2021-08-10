@@ -9,11 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://:SDW4NR0CK$.di@github.com/DianaLSL/backend-serverless.git"
+    "url": "git+https://:SDW4NR0CK$.di@github.com/DianaLSL/backend-serverless.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DianaLSL/backend-serverless.git"
+  },
   "dependencies": {
+    "cors": "^2.8.5",
     "nodemon": "^2.0.12"
   },
   "devDependencies": {

@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const router = express.Router();
-router.get('/', (req,res) => res.send({"message": "hi there!"}))
+router.get('/', (req,res) => res.send({"message": "hi there!"}));
 
 app.use(bodyParser.json());
 app.use('/.netlify/functions/server', router);
