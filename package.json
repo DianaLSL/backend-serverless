@@ -1,0 +1,27 @@
+{
+  "name": "backend-test-g6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "netlify-lambda build express",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://:SDW4NR0CK$.di@github.com/DianaLSL/backend-serverless.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "netlify-lambda": "^2.0.14",
+    "nodemo": "^1.0.0",
+    "serverless-http": "^2.7.0"
+  }
+}
