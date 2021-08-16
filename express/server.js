@@ -57,6 +57,7 @@ const app = express();
 // PASO3: se define una sub aplicacion de express con sus respectivas rutas.
 const router = express.Router();
 router.get("/", (req, res) => res.send({ hola: "hola" }));
+console.log(productos)
 router.get("/productos", (req, res) => res.send(productos));
 
 // PASO 4: incluye funcionalidades que express no trae por defecto
