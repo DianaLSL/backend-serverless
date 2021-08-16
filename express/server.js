@@ -1,4 +1,3 @@
-
 /*// PASO 1:  importar las dependencias o paquetes a utilizar
 const express = require("express");
 const path = require("path");
@@ -39,23 +38,34 @@ module.exports.handler = serverless(app);
 
 */
 
-
 /// PASO 1:  importar las dependencias o paquetes a utilizar
 const express = require("express");
 const path = require("path");
 const serverless = require("serverless-http");
 const bodyParser = require("body-parser");
 
-
-let pokemons = [{ name: "pikachu"}, {name: "bulbasur"}, {name: "charizard"}, {name:"ditto"}, ]
+let pokemons = [
+  { name: "pikachu",
+    price: 100,
+    description: "Electric Pokemon" },
+  { name: "bulbasur",
+    price: 200,
+    description: "Aquatic Pokemon" },
+  { name: "charizard",
+    price: 300,
+    description: "Fire Pokemon" },
+  { name: "ditto", 
+    price: 50,
+    description: "Polymorphic Pokemon" },
+];
 
 // PASO 2: Generas una aplicacion de express
 const app = express();
 
 // PASO3: se define una sub aplicacion de express con sus respectivas rutas.
 const router = express.Router();
-router.get("/", (req, res) => res.send({ "hola": "hola" }));
-router.get("/pokemons", (req,res) => res.send(pokemons));
+router.get("/", (req, res) => res.send({ hola: "hola" }));
+router.get("/pokemons", (req, res) => res.send(pokemons));
 
 // PASO 4: incluye funcionalidades que express no trae por defecto
 app.use(bodyParser.json());
