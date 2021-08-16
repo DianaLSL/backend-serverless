@@ -1,8 +1,4 @@
 
-
-
-
-
 /*// PASO 1:  importar las dependencias o paquetes a utilizar
 const express = require("express");
 const path = require("path");
@@ -43,12 +39,15 @@ module.exports.handler = serverless(app);
 
 */
 
+
+/// PASO 1:  importar las dependencias o paquetes a utilizar
 const express = require("express");
 const path = require("path");
 const serverless = require("serverless-http");
 const bodyParser = require("body-parser");
 
 
+let pokemons = [{ name: "pikachu"}, {name: "bulbasur"}, {name: "charizard"}, {name:"ditto"}, ]
 
 // PASO 2: Generas una aplicacion de express
 const app = express();
@@ -56,7 +55,9 @@ const app = express();
 // PASO3: se define una sub aplicacion de express con sus respectivas rutas.
 const router = express.Router();
 router.get("/", (req, res) => res.send({ "hola": "hola" }));
+router.get("/productos", (req,res) => res.send(pokemons));
 
+// PASO 4: incluye funcionalidades que express no trae por defecto
 app.use(bodyParser.json());
 app.use("/.netlify/functions/server", router); // path must route to lambda
 
