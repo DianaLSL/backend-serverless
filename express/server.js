@@ -42,6 +42,7 @@ module.exports.handler = serverless(app);
 const express = require("express");
 const path = require("path");
 const serverless = require("serverless-http");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const datos = require("./productos.json");
